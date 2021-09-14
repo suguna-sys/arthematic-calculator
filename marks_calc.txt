@@ -1,0 +1,90 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+
+<tr>
+<td>subject</td>
+<td>First Year</td>
+<td>ll'nd Year</td>
+<td>lll'rd Year</td>
+<td>Total</td>
+
+</tr>
+
+<%
+int first_year_physics=70;
+int first_year_chemistry=80;
+int first_year_maths=85;
+
+
+int second_year_physics=90;
+int second_year_chemistry=95;
+int second_year_maths=95;
+
+int third_year_physics=70;
+int third_year_chemistry=75;
+int third_year_maths=65;
+
+
+
+
+int total_physics=0;
+int total_chemistry=0;
+int total_maths=0;
+
+total_physics=first_year_physics+second_year_physics+third_year_physics;
+total_chemistry=first_year_chemistry+second_year_chemistry+third_year_chemistry;
+total_maths=first_year_maths+second_year_maths+third_year_maths;
+
+float total,percentage,average;
+
+total=total_physics+total_chemistry+total_maths;
+
+average=total/9;
+/*9 means toatal subjects for 3 yeras   */
+percentage=(total/900)*100;
+/*900 means toatal marks for 3 yeras   */
+
+System.out.println("total marks:"+total);
+System.out.println("average:--"+average);
+System.out.println("percentage==>"+percentage);
+
+
+
+
+%>
+<tr>
+<td>physics</td>
+<td><%=first_year_physics %></td>
+<td><%=second_year_physics %></td>
+<td><%=third_year_physics %></td>
+<td><%=total_physics %></td>
+</tr>
+<tr>
+<td>chemistry</td>
+<td><%=first_year_chemistry %></td>
+<td><%=second_year_chemistry %></td>
+<td><%=third_year_chemistry %></td>
+<td><%=total_chemistry %></td>
+</tr>
+<tr>
+<td>maths</td>
+<td><%=first_year_maths %></td>
+<td><%=second_year_maths %></td>
+<td><%=third_year_maths %></td>
+<td><%=total_maths %></td>
+</tr>
+</table>
+
+Total Marks:-<%=total %>
+Average :- <%=average %>
+Percentage:-<%=percentage %>
+</body>
+</html>
